@@ -357,11 +357,11 @@ public class GUI implements MouseListener, MouseMotionListener, KeyListener {
 		//optとcmd同時押しでボタンを破線で浮かび上がらせる
 		if(TTalk.idle && false==PCARDFrame.pc.stack.cantPeek) outlineStrokeCheck();
 
-		if(AuthTool.tool!=null && AuthTool.tool.getClass() == ButtonGUI.class &&
+		if(AuthTool.tool!=null && AuthTool.tool.getClass().equals(ButtonGUI.class) &&
 				ButtonGUI.gui.target != null) {
 			ButtonGUI.drawSelectBorder(ButtonGUI.gui.target);
 		}
-		else if(AuthTool.tool!=null && AuthTool.tool.getClass() == FieldGUI.class
+		else if(AuthTool.tool!=null && AuthTool.tool.getClass().equals(FieldGUI.class)
 				&& FieldGUI.gui.target != null) {
 			FieldGUI.drawSelectBorder(FieldGUI.gui.target);
 		}
